@@ -1,21 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import React,{Component} from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import Login from './components/login.js'
+import Home from './components/home.js'
+import Register from './components/register.js'
+import Search from './components/search.js'
+import Cart from './components/cart.js'
+import Confirm from './components/confirm.js'
 
-export default function App() {
+import {createStackNavigator} from '@react-navigation/stack';
+import LocationMap from './components/location.js';
+
+const Stack = createStackNavigator();
+export default class  App extends Component {
+  render(){
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Register" component={Register}/>
+        <Stack.Screen name="Search" component={Search}/>
+        <Stack.Screen name="Cart" component={Cart}/>
+        
+        <Stack.Screen name="Confirmation" component={Confirm}/>
+        <Stack.Screen name="Location" component={LocationMap}/>
+        
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  }
+  }

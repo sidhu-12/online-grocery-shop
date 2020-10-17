@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "GroceryShop",
-    "slug": "GroceryShop",
+    "name": "GroceryShop_final1",
+    "slug": "groceryshop_final1",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/fifo.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/fifo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,6 +21,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }
